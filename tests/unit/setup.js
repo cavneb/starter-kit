@@ -29,19 +29,19 @@ function buildComponent(test, props, template) {
   return component;
 }
 
-// function createView(template, context){
-//   if (!context) { context = {}; }
-                 
-//   var View = Ember.View.extend({
-//     controller: context,
-//     template: Ember.Handlebars.compile(template)
-//   });
-  
-//   return View.create();
-// }
+function createView(template, context){
+  if (!context) { context = {}; }
 
-// function append(view){
-//   Ember.run(function(){
-//     view.appendTo('#qunit-fixture');
-//   });
-// }
+  var View = Ember.View.extend({
+    controller: context,
+    template: Ember.Handlebars.compile(template)
+  });
+
+  return View.create();
+}
+
+function append(view){
+  Ember.run(function(){
+    view.appendTo('#qunit-fixture');
+  });
+}

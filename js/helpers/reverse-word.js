@@ -2,6 +2,6 @@
 // resolver if their name contains a dash (reverse-word, translate-text, etc.)
 // For more details: http://stefanpenner.github.io/ember-app-kit/guides/using-modules.html
 
-Ember.Handlebars.makeBoundHelper(function(word) {
+Ember.Handlebars.registerBoundHelper('reverse-word', function(word) {
   return word.split('').reverse().join('');
 });
