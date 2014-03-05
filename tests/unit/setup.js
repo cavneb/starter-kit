@@ -2,7 +2,9 @@ emq.globalize();
 
 setResolver(Ember.DefaultResolver.extend({
   testSubjects: {
-    'component:pretty-color': App.PrettyColorComponent
+    'component:pretty-color': App.PrettyColorComponent,
+    'component:template-less': App.TemplateLessComponent,
+    'route:index': App.IndexRoute
   },
   resolve: function(fullName) {
     return this.testSubjects[fullName] || this._super.apply(this, arguments);
@@ -26,3 +28,20 @@ function buildComponent(test, props, template) {
   test.append();
   return component;
 }
+
+// function createView(template, context){
+//   if (!context) { context = {}; }
+                 
+//   var View = Ember.View.extend({
+//     controller: context,
+//     template: Ember.Handlebars.compile(template)
+//   });
+  
+//   return View.create();
+// }
+
+// function append(view){
+//   Ember.run(function(){
+//     view.appendTo('#qunit-fixture');
+//   });
+// }

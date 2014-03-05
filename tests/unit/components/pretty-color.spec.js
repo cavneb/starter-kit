@@ -7,6 +7,6 @@ var template = function() {/*
 test('applies color by name', function() {
   expect(2);
   var component = buildComponent(this, { name: 'green' }, template);
-  ok(component.get('name') === 'green');
-  ok(component.$().attr('style') === 'color: green;')
+  ok(component.get('name') === 'green', 'name is "green"');
+  ok(component.$().attr('style') === 'color: green;', 'text color is green')
 });
