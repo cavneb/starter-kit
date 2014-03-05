@@ -1,4 +1,4 @@
-moduleForComponent('pretty-color', 'PrettyColorComponent', { needs: [] });
+moduleForComponent('pretty-color', 'PrettyColorComponent');
 
 var template = function() {/*
   {{pretty-color color=name}}
